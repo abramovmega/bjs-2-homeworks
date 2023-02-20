@@ -28,7 +28,7 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
     let loanBody = (amount-contribution);
     let payment = (loanBody*(monthlyPercentage+(monthlyPercentage/(((1+monthlyPercentage)**countMonths)-1))));
     let amountToBeRefunded = (payment*countMonths);
-    return (amountToBeRefunded.toFixed(2));
+    return +(amountToBeRefunded.toFixed(2));
 }
     
 console.log(calculateTotalMortgage(10, 0, 20000, 24.));
